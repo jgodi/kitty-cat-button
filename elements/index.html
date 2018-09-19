@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kitty Cat Button</title>
+  <base href="/">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <kitty-cat-button id="btn"
+                    name="NEW"></kitty-cat-button>
+
+  <script type="text/javascript"
+          src="kitty-cat-button.js"></script>
+
+  <script type="text/javascript">
+    let elm = document.getElementById('btn');
+    elm.addEventListener('action', () => {
+      alert('You clicked the cat!');
+    });
+    setTimeout(() => {
+      elm.name = 'UPDATED!';
+    }, 4000);
+  </script>
+</body>
+
+</html>
