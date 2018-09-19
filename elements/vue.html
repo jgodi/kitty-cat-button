@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kitty Cat Button</title>
+  <base href="/">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+  <h1>Vue Example</h1>
+  <a href="/">Basic HTML Example</a>
+  <a href="/react.html">React Example</a>
+  <br />
+  <br />
+  <div id="app">
+    <kitty-cat-button v-bind:name="name"
+                      v-on:action="alert"></kitty-cat-button>
+  </div>
+
+  <script type="text/javascript"
+          src="kitty-cat-button.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: { name: 'FROM VUE!' },
+      methods: {
+        alert: function () {
+          alert('You clicked it! From Vue!');
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>
